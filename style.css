@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    z-index:-1; 
+}
+
+main {
+    background-color: rgba(17, 17, 17, 0.669);
+    margin-top: 10vh;
+}
+
+nav {
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+}
+
+.headertitle {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+
+article {color: white;}
+
+.links a {text-decoration: none;}
+
+.icon {
+    background: url(images/sprite3.png) no-repeat;
+	width: 66px;
+	height: 66px;
+    display: inline-block;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    width: 100vw;
+    bottom: 0vw;
+    background-color: rgba(65, 64, 64, 0.669);
+    display: block;
+    margin-top: 55vh;
+}
+
+#soundcloud {background-position: -587px -72px;}
+#yt {background-position: -439px -221px;}
+#pinterest {background-position: -141px -221px;}
+#ig {background-position: -290px -221px;}
+
+@media screen and (max-width: 600px){
+    nav {
+        position: relative;
+        background-color: beige;
+    }
+
+    .title {
+        background-color: white;
+        padding: 1vw;
+        color: black;
+    }
+
+    .links {
+        display: none;
+        z-index: 1;
+        position: absolute;
+        background-color: rgb(255, 252, 203);
+        box-shadow: rgb(15, 21, 4);
+        min-width: 100vw;
+    }
+
+    .links a {
+        color: black;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        display: block;
+    }
+    .links a:hover{background-color: rgb(225, 255, 255); transition:.5s;}
+    nav:hover .links {display: block; transition: .5s;}
+    nav:hover .title {background-color: white; transition: .5s;}
+}
